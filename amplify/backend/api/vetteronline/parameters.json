@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "vetteronline",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authvetteronlinecca5da13",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-05-08T20:26:03.827Z"
+}

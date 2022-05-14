@@ -1,0 +1,58 @@
+type Prescription @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  medicine: String
+  instruction: String
+  visitID: ID! @index(name: "byVisit")
+}
+
+type Visit @model @searchable @auth(rules: [{ allow: private }]) {
+  id: ID!
+  petId: String
+  petName: String
+  vetId: String
+  visitNotes: String
+  Prescriptions: [Prescription] @hasMany(indexName: "byVisit", fields: ["id"])
+  visitTime: AWSDateTime
+  visitReason: String
+  patientId: String
+  videoLink: String
+  invoiceId: String
+}
+
+type Invoice @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  vetId: String
+  patientId: String
+  amount: String
+  dateSent: AWSDate
+  datePaid: AWSDate
+  visitId: String
+}
+
+type Pet @model @searchable @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String
+  birthday: AWSDate
+  weight: Int
+  species: String
+  breed: String
+  Vet: Vet @hasOne
+  patientID: ID! @index(name: "byPatient")
+}
+
+type Patient @model @searchable @auth(rules: [{ allow: owner }, { allow: private }]) {
+  id: ID!
+  name: String!
+  Pets: [Pet] @hasMany(indexName: "byPatient", fields: ["id"])
+  cognitoId: String
+  cardNum: String
+  cardCVV: String
+  cardExpDate: String
+}
+
+type Vet @model @searchable @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String!
+  cognitoId: String!
+  specialty: String
+}

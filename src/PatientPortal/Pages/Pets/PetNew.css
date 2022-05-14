@@ -1,0 +1,14 @@
+.time_picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #b6b6b6;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0px 5px 0px;
+}
+
+.time_picker:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
+}

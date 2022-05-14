@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-vetteronline-dev-170425-authRole",
+      "UnauthRoleArn": "arn:aws:iam::568187732893:role/amplify-vetteronline-dev-170425-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::568187732893:role/amplify-vetteronline-dev-170425-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-vetteronline-dev-170425-deployment",
+      "UnauthRoleName": "amplify-vetteronline-dev-170425-unauthRole",
+      "StackName": "amplify-vetteronline-dev-170425",
+      "StackId": "arn:aws:cloudformation:us-west-2:568187732893:stack/amplify-vetteronline-dev-170425/f0d744e0-c298-11ec-8afb-0a1da1a0ac0f",
+      "AmplifyAppId": "d1wytw89nx1twe"
+    },
+    "categories": {
+      "auth": {
+        "vetteronlinecca5da13": {}
+      }
+    }
+  }
+}

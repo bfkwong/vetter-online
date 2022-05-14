@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "vetteronline",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/Users/bryankwong/Desktop/SJSU/CMPE282/project/vetter-online/amplify/backend/api/vetteronline/schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authvetteronlinecca5da13"
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ],
+    "conflictResolution": {}
+  }
+}
